@@ -52,7 +52,7 @@ class SwiperPaymentController < Spree::StoreController
     translist = a=AuthorizeNet::Reporting::Transaction.new(AUTHORIZE_NET_API_ID,AUTHORIZE_NET_API_KEY).get_unsettled_transaction_list
     if translist.transactions.count > 0
       translist.transactions.each do |t|
-        if t.order.invoice_num == order.number and t.settle_amount == order.total
+        if t.order.invoice_num == order.id and t.settle_amount == order.total
           # create payment
           payment = order.payments.new(:amount => t.settle_amount, :payment_method_id => payment_method_id)
           payment.state = :completed
