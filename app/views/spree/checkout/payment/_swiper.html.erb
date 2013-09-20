@@ -1,5 +1,7 @@
 <%
 ninjaparams = {:amount => @order.total, :invoiceNumber => @order.number, :returnUrl => 'http://odense.cs2.dk:8888/swiper/paid'}
 %>
-In the app write <%=@order.id%> as invoice number, and make sure you have the amount <%=@order.total%>
+In the app write <%=@order.id%> as invoice number, and make sure you have the amount <%=@order.total%><br/>
+Then <a href="/swiper/paid">GO HERE</a><br/>
+TODO: remove the button below!!!
 <!--<a href="com-appninjas-iswipe://charge/1.0.0/?<%= ninjaparams.to_query%>">Launch creditcard swiper</a>-->
