@@ -3,7 +3,7 @@
 <div style="width:33%;float:left;text-align:center;">
   <a href="/assets/store/swipe_1.png" rel="prettyPhoto"><img src="/assets/store/swipe_1.png" style="width:120px;" /></a>
   <br/>
-  1: Make sure you enter the amount <b><%= (@order.total*100).round/100.0 %></b>
+  1: Make sure you enter the amount <b><%= '%.2f' % ((@order.total*100).round/100.0) %></b>
 </div>
 <div style="width:33%;float:left;text-align:center;">
   <a href="/assets/store/swipe_2.png" rel="prettyPhoto"><img src="/assets/store/swipe_2.png" style="width:120px;" /></a>
@@ -13,10 +13,14 @@
 <div style="width:33%;float:left;text-align:center;">
   <a href="/assets/store/swipe_3.png" rel="prettyPhoto"><img src="/assets/store/swipe_3.png" style="width:120px;" /></a>
   <br/>
-  3: Scroll down and enter <b><%=@order.id%></b> as invoice number
+  3: Scroll down and enter <b><%=@order.id%></b> as Invoice #
 </div>
 <br class="clear" />
 <div style="width:100%;text-align:center;">
-  <a href="/swiper/paid" class="button primary">4: CLICK HERE WHEN YOU ARE DONE</a>
+  4: SWIPE THE CUSTOMERS CREDITCARD
+</div>
+<br class="clear" />
+<div style="width:100%;text-align:center;">
+  <a href="/swiper/paid" class="button primary">%: CLICK HERE WHEN YOU ARE DONE</a>
 </div>
 <!--<a href="com-appninjas-iswipe://charge/1.0.0/?<%= ninjaparams.to_query%>">Launch creditcard swiper</a>-->
