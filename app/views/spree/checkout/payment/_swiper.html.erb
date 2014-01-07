@@ -1,28 +1,32 @@
 <% ninjaparams = {:amount => @order.total, :invoiceNumber => @order.number, :returnUrl => 'http://odense.cs2.dk:8888/swiper/paid'} %>
 
 <div style="width:33%;float:left;text-align:center;">
-  <a href="/assets/store/swipe_1.png" rel="prettyPhoto"><img src="/assets/store/swipe_1.png" style="width:120px;" /></a>
+  <a href="/assets/store/swipe_1.png" rel="prettyPhoto"><img src="<%= asset_url('/store/swipe_1.png') %>" style="width:120px;" /></a>
   <br/>
-  1: Make sure you enter the amount <b><%= '%.2f' % ((@order.total*100).round/100.0) %></b>
+  1: Make sure you enter the amount <b><%= '%.2f' % ((@order.total.to_f*100).round/100.0) %></b>
 </div>
 <div style="width:33%;float:left;text-align:center;">
-  <a href="/assets/store/swipe_2.png" rel="prettyPhoto"><img src="/assets/store/swipe_2.png" style="width:120px;" /></a>
+  <a href="/assets/store/swipe_2.png" rel="prettyPhoto"><img src="<%= asset_url('/store/swipe_2.png') %>" style="width:120px;" /></a>
   <br/>
   2: Touch the <b>more</b> button
 </div>
 <div style="width:33%;float:left;text-align:center;">
-  <a href="/assets/store/swipe_3.png" rel="prettyPhoto"><img src="/assets/store/swipe_3.png" style="width:120px;" /></a>
+  <a href="/assets/store/swipe_3.png" rel="prettyPhoto"><img src="<%= asset_url('/store/swipe_3.png') %>" style="width:120px;" /></a>
   <br/>
-  3: Scroll down and enter <b><%=@order.id%></b> as Invoice #
+  3: Scroll down<br/>
+  4: Enter <b><%=@order.id%></b> as Invoice #<br/>
+  5: Touch the <b>Done</b> button
 </div>
 <br class="clear" />
 <br class="clear" />
 <br class="clear" />
 <div style="width:50%;text-align:center;float:left;">
-  4: SWIPE THE CUSTOMERS CREDITCARD
+  6: SWIPE THE CUSTOMERS CREDITCARD<br/>
+  7: Touch <b>Signature</b> and have the customer sign<br/>
+  8: Touch <b>Charge</b>
 </div>
 <div style="width:50%;text-align:center;float:left;">
-  <a href="/swiper/paid" class="button primary">5: CLICK HERE WHEN YOU ARE DONE</a>
+  <a href="/swiper/paid" class="button primary">9: CLICK HERE WHEN YOU ARE DONE</a>
 </div>
 <br class="clear" />
 <!--<a href="com-appninjas-iswipe://charge/1.0.0/?<%= ninjaparams.to_query%>">Launch creditcard swiper</a>-->

@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_swiper'
-  s.version     = '0.1.2'
+  s.version     = '0.1.3'
   s.summary     = 'Integrates with AppNinja swiper and Authorize.net gateway'
   s.description = ''
   s.required_ruby_version = '>= 1.9.3'
