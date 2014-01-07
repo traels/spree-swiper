@@ -1,17 +1,17 @@
 <% ninjaparams = {:amount => @order.total, :invoiceNumber => @order.number, :returnUrl => 'http://odense.cs2.dk:8888/swiper/paid'} %>
 
 <div style="width:33%;float:left;text-align:center;">
-  <a href="/assets/store/swipe_1.png" rel="prettyPhoto"><img src="<%= asset_url('/store/swipe_1.png') %>" style="width:120px;" /></a>
+  <a href="<%= asset_url('store/swipe_1.png') %>" rel="prettyPhoto"><img src="<%= asset_url('store/swipe_1.png') %>" style="width:120px;" /></a>
   <br/>
   1: Make sure you enter the amount <b><%= '%.2f' % ((@order.total.to_f*100).round/100.0) %></b>
 </div>
 <div style="width:33%;float:left;text-align:center;">
-  <a href="/assets/store/swipe_2.png" rel="prettyPhoto"><img src="<%= asset_url('/store/swipe_2.png') %>" style="width:120px;" /></a>
+  <a href="<%= asset_url('store/swipe_2.png') %>" rel="prettyPhoto"><img src="<%= asset_url('store/swipe_2.png') %>" style="width:120px;" /></a>
   <br/>
   2: Touch the <b>more</b> button
 </div>
 <div style="width:33%;float:left;text-align:center;">
-  <a href="/assets/store/swipe_3.png" rel="prettyPhoto"><img src="<%= asset_url('/store/swipe_3.png') %>" style="width:120px;" /></a>
+  <a href="<%= asset_url('store/swipe_3.png') %>" rel="prettyPhoto"><img src="<%= asset_url('store/swipe_3.png') %>" style="width:120px;" /></a>
   <br/>
   3: Scroll down<br/>
   4: Enter <b><%=@order.id%></b> as Invoice #<br/>
