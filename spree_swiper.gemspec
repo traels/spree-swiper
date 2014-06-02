@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.1'
+  s.add_dependency 'spree_core', '~> 2.2'
   s.add_dependency 'authorize-net', '~> 1.5.2'
 
   s.add_development_dependency 'capybara', '~> 2.1'
@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'rspec-rails'
   #s.add_development_dependency 'sass-rails'
-  s.add_development_dependency 'selenium-webdriver'
+  #s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
 end
